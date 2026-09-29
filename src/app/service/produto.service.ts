@@ -6,9 +6,9 @@ export class ProdutoService {
   lista: Produto[] = [
   {
     "codigo": 1,
-    "nome": "The Dark Side of the Moon - Pink Floyd",
-    "descritivo": "Rock progressivo, atmosferas imersivas e uma viagem para ouvir do começo ao fim.",
-    "keywords": "rock progressivo psicodélico, Pink Floyd, vinil",
+    "nome": "Wish You Were Here - Pink Floyd",
+    "descritivo": "Uma obra de rock progressivo com longas construções instrumentais e clima contemplativo.",
+    "keywords": "rock progressivo, rock clássico, Pink Floyd, anos 1970, vinil",
     "valor": 159.9,
     "valorPromo": 0,
     "quantidade": 18,
@@ -16,9 +16,9 @@ export class ProdutoService {
   },
   {
     "codigo": 2,
-    "nome": "Abbey Road - The Beatles",
-    "descritivo": "Harmonias e melodias que fazem deste disco uma parada obrigatória na coleção.",
-    "keywords": "rock pop britânico, The Beatles, vinil",
+    "nome": "Sgt. Pepper's Lonely Hearts Club Band - The Beatles",
+    "descritivo": "Arranjos inventivos e psicodelia em um álbum marcante do rock britânico.",
+    "keywords": "rock psicodélico, rock britânico, The Beatles, anos 1960, vinil",
     "valor": 189.9,
     "valorPromo": 0,
     "quantidade": 12,
@@ -26,9 +26,9 @@ export class ProdutoService {
   },
   {
     "codigo": 3,
-    "nome": "Thriller - Michael Jackson",
-    "descritivo": "Pop, soul e funk em um disco cheio de ritmo e faixas inesquecíveis.",
-    "keywords": "pop soul funk, Michael Jackson, vinil",
+    "nome": "Bad - Michael Jackson",
+    "descritivo": "Pop e R&B em canções dançantes, com produção marcante e vocais fortes.",
+    "keywords": "pop, R&B, dance-pop, Michael Jackson, anos 1980, vinil",
     "valor": 179.9,
     "valorPromo": 149.9,
     "quantidade": 0,
@@ -36,9 +36,9 @@ export class ProdutoService {
   },
   {
     "codigo": 4,
-    "nome": "Nevermind - Nirvana",
-    "descritivo": "Guitarras intensas e a energia do grunge em um clássico do rock alternativo.",
-    "keywords": "rock grunge alternativo, Nirvana, vinil",
+    "nome": "In Utero - Nirvana",
+    "descritivo": "Grunge cru e alternativo, com guitarras intensas e dinâmica contrastante.",
+    "keywords": "grunge, rock alternativo, Nirvana, anos 1990, vinil",
     "valor": 169.9,
     "valorPromo": 139.9,
     "quantidade": 0,
@@ -207,20 +207,20 @@ export class ProdutoService {
 ];
   readonly previas: Record<number, { faixa: string; url: string }> = {
   "1": {
-    "faixa": "Money",
-    "url": "https://www.deezer.com/track/116914026"
+    "faixa": "Wish You Were Here",
+    "url": "https://www.deezer.com/track/116914042"
   },
   "2": {
-    "faixa": "Come Together (Remastered 2009)",
-    "url": "https://www.deezer.com/track/116348452"
+    "faixa": "Sgt. Pepper's Lonely Hearts Club Band (Remastered 2009)",
+    "url": "https://www.deezer.com/track/116348670"
   },
   "3": {
-    "faixa": "Thriller",
-    "url": "https://www.deezer.com/track/831319"
+    "faixa": "Bad (2012 Remaster)",
+    "url": "https://www.deezer.com/track/59509421"
   },
   "4": {
-    "faixa": "Smells Like Teen Spirit",
-    "url": "https://www.deezer.com/track/13791930"
+    "faixa": "Heart-Shaped Box",
+    "url": "https://www.deezer.com/track/70466227"
   },
   "5": {
     "faixa": "Dreams (2004 Remaster)",
