@@ -7,7 +7,6 @@ import { CestaService } from '../service/cesta.service';
 @Component({
   imports: [CommonModule],
   selector: 'app-resultado-busca',
-  styleUrl: './resultado-busca.css',
   templateUrl: './resultado-busca.html',
 })
 export class ResultadoBusca {

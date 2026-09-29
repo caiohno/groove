@@ -6,7 +6,6 @@ import { CestaService } from '../service/cesta.service';
 @Component({
   imports: [CommonModule],
   selector: 'app-pedido',
-  styleUrl: './pedido.css',
   templateUrl: './pedido.html',
 })
 export class Pedido {

@@ -6,7 +6,6 @@ import { ClienteService } from '../service/cliente.service';
 @Component({
   imports: [CommonModule],
   selector: 'app-cadastro',
-  styleUrl: './cadastro.css',
   templateUrl: './cadastro.html',
 })
 export class Cadastro {

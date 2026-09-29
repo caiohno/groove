@@ -5,7 +5,6 @@ import { ClienteService } from '../service/cliente.service';
 @Component({
   imports: [CommonModule],
   selector: 'app-login',
-  styleUrl: './login.css',
   templateUrl: './login.html',
 })
 export class Login {
