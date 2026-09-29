@@ -27,7 +27,6 @@ export class Cadastro {
     this.tentouSalvar = true;
     this.enviado = false;
 
-    // usa a própria validação nativa do HTML5 (required/pattern já estão no template)
     if (!form.checkValidity()) {
       return;
     }

@@ -18,9 +18,7 @@ export class Detalhe {
     private ehNavegador = isPlatformBrowser(inject(PLATFORM_ID));
     private cestaService = inject(CestaService);
 
-    //evento apos o componente ser carregado
     ngOnInit(){
-      // localStorage só existe no navegador (o projeto também renderiza no servidor, SSR)
       if(!this.ehNavegador) return;
 
       const codigoUrl = new URLSearchParams(location.search).get('codigo');
@@ -37,7 +35,6 @@ export class Detalhe {
       return this.cestaService.formatar(valor);
     }
 
-    // Wireframe: COMPRAR -> CESTA. Só segue para a cesta se conseguiu adicionar.
     comprar(){
       if (this.cestaService.adicionar(this.obj)) {
         location.href = "./cesta";

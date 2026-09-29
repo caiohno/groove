@@ -4,8 +4,6 @@ import { Cliente } from '../model/cliente';
 
 const CHAVE_STORAGE = 'clientes';
 
-// P1 não tem backend/banco de dados — os cadastros ficam em localStorage,
-// simulando uma base de clientes só pra login/cadastro funcionarem de ponta a ponta.
 @Injectable({ providedIn: 'root' })
 export class ClienteService {
   private ehNavegador = isPlatformBrowser(inject(PLATFORM_ID));
@@ -26,7 +24,6 @@ export class ClienteService {
     localStorage.setItem(CHAVE_STORAGE, JSON.stringify(this.clientes));
   }
 
-  // cadastra um cliente novo, ou atualiza os dados se o e-mail já existir
   cadastrar(c: Cliente) {
     const i = this.clientes.findIndex(x => x.email.toLowerCase() === c.email.toLowerCase());
     if (i >= 0) this.clientes[i] = c;

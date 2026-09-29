@@ -6,9 +6,6 @@ import { Cesta } from '../model/cesta';
 
 const CHAVE_STORAGE = 'cesta';
 
-// Guarda os itens da cesta em localStorage, do mesmo jeito que detalhe.ts
-// já faz com o produto selecionado — assim a cesta sobrevive à navegação
-// entre páginas (vitrine, detalhe, cesta) sem precisar de backend.
 @Injectable({ providedIn: 'root' })
 export class CestaService {
   private ehNavegador = isPlatformBrowser(inject(PLATFORM_ID));
@@ -36,7 +33,6 @@ export class CestaService {
     return produto.valorPromo > 0 ? produto.valorPromo : produto.valor;
   }
 
-  // Devolve true se adicionou e false se a quantidade pedida passaria do estoque.
   adicionar(produto: Produto, qtd: number = 1): boolean {
     const existente = this.cesta.itens.find(i => i.produto.codigo === produto.codigo);
     const jaNaCesta = existente ? existente.qtd : 0;
@@ -60,9 +56,6 @@ export class CestaService {
     this.salvar();
   }
 
-  // delta = 1 (aumentar) ou -1 (diminuir).
-  // Nunca deixa a quantidade ficar abaixo de 1 nem acima do estoque.
-  // Devolve false quando bateu no limite do estoque (a tela usa isso para avisar).
   alterarQtd(codigo: number, delta: number): boolean {
     const item = this.cesta.itens.find(i => i.produto.codigo === codigo);
     if (!item) return false;
@@ -87,8 +80,6 @@ export class CestaService {
     return this.cesta.itens.reduce((soma, i) => soma + i.qtd, 0);
   }
 
-  // 39.9 -> "R$ 39,90". Usa o formatador do próprio navegador, então não
-  // precisa registrar idioma no app.config.ts.
   formatar(valor: number): string {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   }

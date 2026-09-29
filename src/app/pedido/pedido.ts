@@ -15,7 +15,6 @@ export class Pedido {
   obj: PedidoModel = new PedidoModel();
 
   ngOnInit() {
-    // localStorage só existe no navegador (o projeto também renderiza no servidor, SSR)
     if (!this.ehNavegador) return;
 
     const json = localStorage.getItem('pedidoSelecionado');

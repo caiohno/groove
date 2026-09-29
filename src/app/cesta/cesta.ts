@@ -13,7 +13,7 @@ export class Cesta {
   private service = inject(CestaService);
   private pedidoService = inject(PedidoService);
   mensagem: string = "";
-  tipoMensagem: string = "warning"; // vira a cor do alerta: warning | success | secondary
+  tipoMensagem: string = "warning";
 
   get lista() {
     return this.service.cesta.itens;
@@ -55,8 +55,6 @@ export class Cesta {
     this.avisar("Cesta esvaziada.", "secondary");
   }
 
-  // P1 não tem backend, mas o pedido é criado de verdade em localStorage
-  // (PedidoService), pra aparecer depois em "meus pedidos".
   finalizar() {
     if (this.lista.length === 0) {
       this.avisar("Sua cesta está vazia.", "secondary");

@@ -14,7 +14,6 @@ export class ListaPedidos {
   private service = inject(PedidoService);
   private cestaService = inject(CestaService);
 
-  // mais recente primeiro
   lista: Pedido[] = this.service.listar().slice().reverse();
 
   formatar(valor: number): string {

@@ -6,8 +6,6 @@ import { ItemCesta } from '../model/item-cesta';
 
 const CHAVE_PEDIDOS = 'pedidos';
 
-// P1 não tem backend: os pedidos ficam guardados em localStorage, criados a
-// partir da cesta no momento em que o cliente clica em "finalizar" (cesta.ts).
 @Injectable({ providedIn: 'root' })
 export class PedidoService {
   private ehNavegador = isPlatformBrowser(inject(PLATFORM_ID));

@@ -19,7 +19,6 @@ export class ResultadoBusca {
   lista: Produto[] = [];
 
   ngOnInit() {
-    // localStorage só existe no navegador (o projeto também renderiza no servidor, SSR)
     if (!this.ehNavegador) return;
 
     this.termo = new URLSearchParams(location.search).get('q') ?? localStorage.getItem('buscaTermo') ?? '';

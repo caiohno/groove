@@ -15,8 +15,6 @@ export class App {
   readonly cestaService = inject(CestaService);
   private clienteService = inject(ClienteService);
 
-  // Mostra o nome de quem está logado no botão de cadastro, em vez do
-  // texto genérico "meu cadastro" — dá pra ver quem está autenticado.
   nomeCliente(): string {
     return this.clienteService.clienteLogado()?.nome ?? '';
   }

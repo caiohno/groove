@@ -15,7 +15,6 @@ export class Vitrine {
   readonly produtoService = inject(ProdutoService);
   private cestaService = inject(CestaService);
 
-  // a rota "promo" usa este mesmo componente, mostrando só os produtos em promoção
   soPromocoes = inject(ActivatedRoute).snapshot.routeConfig?.path === 'promo';
 
   lista: Produto[] = this.soPromocoes

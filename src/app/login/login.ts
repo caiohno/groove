@@ -16,7 +16,6 @@ export class Login {
     const cliente = this.service.autenticar(email, senha);
     this.erro = !cliente;
     if (cliente) {
-      // sem backend na P1: só guarda quem "está logado" pra outras páginas usarem depois, se precisar
       localStorage.setItem('clienteLogado', JSON.stringify(cliente));
       location.href = './';
     }

@@ -12,8 +12,6 @@ export class Reenvio {
   erro = false;
   emailEnviado = "";
 
-  // P1 não implementa recuperação real de senha (sem backend) — só validamos
-  // o formato do e-mail e simulamos a confirmação de envio.
   enviar(email: string) {
     const valor = email.trim();
     const valido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
