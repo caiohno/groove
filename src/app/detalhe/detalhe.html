@@ -24,7 +24,7 @@
       <span>●</span> Disponível · {{ obj.quantidade }} unidade(s) em estoque
     </p>
     <button class="btn btn-primary w-100" *ngIf="obj.quantidade > 0" (click)="comprar()">
-      Adicionar à cesta +
+      Adicionar à cesta
     </button>
     <p class="text-danger" *ngIf="obj.quantidade === 0">Este disco está esgotado no momento.</p>
     <div class="preview-box">
@@ -48,8 +48,19 @@
           [href]="produtoService.previas[obj.codigo]?.url"
           target="_blank"
           rel="noopener noreferrer"
-          >Ouvir no Deezer ↗</a
-        >
+          >Ouvir no Deezer
+          <svg
+            class="ui-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M14 3h7v7M21 3l-10 10M10 3H3v18h18v-7" /></svg
+        ></a>
       </p>
     </div>
   </div>

@@ -6,7 +6,7 @@
       O ritual de escolher. O prazer de ouvir.<br />Encontre o disco que vai fazer parte da sua
       história.
     </p>
-    <a class="btn btn-primary" href="#catalogo">Encontre seu próximo disco <span>↗</span></a>
+    <a class="btn btn-primary" href="#catalogo">Encontre seu próximo disco </a>
     <div class="hero-note">
       <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> Aperte
       o play. Sinta o groove.
@@ -28,14 +28,58 @@
       fetchpriority="high"
     /><span class="hero-label"
       ><span>NA NOSSA VITROLA</span><strong>{{ produtoService.titulo(discoHero) }}</strong
-      ><span>{{ produtoService.artista(discoHero) }} <b>↗</b></span></span
+      ><span>{{ produtoService.artista(discoHero) }} </span></span
     >
   </button>
 </section>
 <div class="listening-strip" *ngIf="!soPromocoes">
-  <span>◎ <b>Clássicos e descobertas</b></span
-  ><span>♫ <b>Ouça antes de escolher</b></span
-  ><span>↗ <b>Sua coleção começa aqui</b></span>
+  <span
+    ><svg
+      class="ui-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="2" />
+      <path d="M6 12a6 6 0 0 1 6-6" />
+    </svg>
+    <b>Clássicos e descobertas</b></span
+  ><span
+    ><svg
+      class="ui-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 14v-2a9 9 0 0 1 18 0v2" />
+      <rect x="3" y="12" width="4" height="8" rx="1" />
+      <rect x="17" y="12" width="4" height="8" rx="1" />
+    </svg>
+    <b>Ouça antes de escolher</b></span
+  ><span
+    ><svg
+      class="ui-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M4 4v16M9 4v16M14 5l5 15M3 20h18" />
+    </svg>
+    <b>Sua coleção começa aqui</b></span
+  >
 </div>
 <section class="catalog-section" id="destaques" *ngIf="!soPromocoes">
   <div class="section-heading">
@@ -43,7 +87,7 @@
       <span class="eyebrow">SELEÇÃO GROOVE</span>
       <h2>Discos que merecem o play.</h2>
     </div>
-    <a href="#catalogo">Explorar todos ↗</a>
+    <a href="#catalogo">Explorar todos</a>
   </div>
   <div class="record-grid">
     <ng-container *ngTemplateOutlet="discos; context: { $implicit: destaques }" />
@@ -85,7 +129,21 @@
         width="500"
         height="500"
         loading="lazy"
-      /><span class="cover-hint">↗ Ouça uma prévia</span>
+      /><span class="cover-hint"
+        ><svg
+          class="ui-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m8 5 11 7-11 7V5Z" />
+        </svg>
+        Ouça uma prévia</span
+      >
     </button>
     <div class="record-copy">
       <h3>{{ produtoService.titulo(obj) }}</h3>
@@ -105,7 +163,7 @@
       <div class="card-actions">
         <button class="btn btn-outline-secondary" (click)="verDetalhe(obj)">Ver disco</button
         ><button class="btn btn-primary" *ngIf="obj.quantidade > 0" (click)="comprar(obj)">
-          Adicionar +</button
+          Adicionar</button
         ><span class="stock-note" *ngIf="obj.quantidade === 0">Esgotado</span>
       </div>
     </div>

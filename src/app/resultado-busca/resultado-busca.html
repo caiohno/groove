@@ -21,7 +21,21 @@
         width="500"
         height="500"
         loading="lazy"
-      /><span class="cover-hint">↗ Ouça uma prévia</span>
+      /><span class="cover-hint"
+        ><svg
+          class="ui-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m8 5 11 7-11 7V5Z" />
+        </svg>
+        Ouça uma prévia</span
+      >
     </button>
     <div class="record-copy">
       <h3>{{ produtoService.titulo(obj) }}</h3>
@@ -41,7 +55,7 @@
       <div class="card-actions">
         <button class="btn btn-outline-secondary" (click)="verDetalhe(obj)">Ver disco</button
         ><button class="btn btn-primary" *ngIf="obj.quantidade > 0" (click)="comprar(obj)">
-          Adicionar +</button
+          Adicionar</button
         ><span class="stock-note" *ngIf="obj.quantidade === 0">Esgotado</span>
       </div>
     </div>
