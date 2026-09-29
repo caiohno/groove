@@ -1,0 +1,28 @@
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+<div class="announcement">PARA QUEM GOSTA DE OUVIR DE VERDADE <span>•</span> DISCOS, HISTÓRIAS E DESCOBERTAS</div>
+<header>
+  <div class="container header-main">
+    <a routerLink="/" class="brand" aria-label="Groove, página inicial"><img src="groove.svg" alt="" width="36" height="36">groove<span>®</span></a>
+    <app-barra-busca />
+    <div class="header-actions">
+      <a routerLink="/login" class="header-action" aria-label="Minha conta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span>{{ nomeCliente() || 'Minha conta' }}</span></a>
+      <a routerLink="/cesta" class="header-action" [attr.aria-label]="'Cesta com ' + cestaService.quantidadeItens() + ' itens'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg><span>Cesta</span><b class="cart-count" aria-live="polite">{{ cestaService.quantidadeItens() }}</b></a>
+    </div>
+  </div>
+  <nav class="main-nav" aria-label="Navegação principal"><div class="container nav-inner">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Todos os discos</a>
+    <a href="/#destaques">Em destaque</a>
+    <a routerLink="/promo" routerLinkActive="active">Promoções <span class="nav-dot"></span></a>
+    <a routerLink="/pedidos" routerLinkActive="active">Meus pedidos</a>
+    <span class="nav-caption">Seu próximo favorito está aqui.</span>
+  </div></nav>
+</header>
+<main id="conteudo" class="container main-content"><router-outlet /></main>
+<footer>
+  <div class="container footer-top">
+    <div class="footer-brand"><a routerLink="/" class="brand">groove<span>®</span></a><p>Discos que ficam.<br>Histórias que você leva para casa.</p><div class="social-icons"><span aria-label="Instagram" role="img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg></span><span aria-label="Música" role="img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/></svg></span><span class="social-caption">Conectados pela música.</span></div></div>
+    <div><h2>Explore</h2><a routerLink="/">Catálogo de vinis</a><a routerLink="/promo">Promoções</a><a routerLink="/pedidos">Meus pedidos</a></div>
+    <div><h2>Fale com a Groove</h2><a href="tel:+551123442344">(11) 2344-2344</a><a href="mailto:contato@groove.example">contato&#64;groove.example</a><p>Rua Frei João, 59<br>São Paulo · SP</p></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Groove · Feito para quem ama música.</span><span>Projeto acadêmico · Loja demonstrativa</span></div>
+</footer>

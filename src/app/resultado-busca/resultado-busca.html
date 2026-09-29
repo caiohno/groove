@@ -1,0 +1,8 @@
+<div class="page-heading"><span class="eyebrow">ENCONTRE O SEU SOM</span><h1>Resultados da busca</h1><p>{{ lista.length }} disco(s) para “{{ termo }}”</p></div><div class="empty-state" *ngIf="lista.length === 0"><h2>Nenhum disco por aqui.</h2><p>Tente outro artista, álbum ou gênero musical.</p><a href="/" class="btn btn-primary">Explorar o catálogo</a></div><div class="record-grid"><article class="record-card" *ngFor="let obj of lista">
+  <button class="cover-button" (click)="verDetalhe(obj)" [attr.aria-label]="'Ouvir e conhecer ' + obj.nome"><img [src]="obj.codigo + '.png'" [alt]="'Capa de ' + obj.nome" width="500" height="500" loading="lazy"><span class="cover-hint">↗ Ouça uma prévia</span></button>
+  <div class="record-copy"><h3>{{ produtoService.titulo(obj) }}</h3><p class="artist">{{ produtoService.artista(obj) }}</p>
+    <div class="old-price"><s *ngIf="obj.valorPromo > 0">{{ produtoService.formatar(obj.valor) }}</s><span *ngIf="obj.valorPromo === 0">Disco de vinil</span></div>
+    <div class="price-line"><span class="price">{{ produtoService.formatar(obj.valorPromo > 0 ? obj.valorPromo : obj.valor) }}</span><span class="discount" *ngIf="obj.valorPromo > 0">-{{ produtoService.calcularDesconto(obj.valor, obj.valorPromo) }}% OFF</span></div>
+    <div class="card-actions"><button class="btn btn-outline-secondary" (click)="verDetalhe(obj)">Ver disco</button><button class="btn btn-primary" *ngIf="obj.quantidade > 0" (click)="comprar(obj)">Adicionar +</button><span class="stock-note" *ngIf="obj.quantidade === 0">Esgotado</span></div>
+  </div>
+</article></div>

@@ -1,0 +1,222 @@
+[
+  {
+    "codigo": 1,
+    "album": "The Dark Side of the Moon",
+    "artista": "Pink Floyd",
+    "faixa": "Money",
+    "url": "https://www.deezer.com/track/116914026",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/e635a8510c1a74bc089b3566ebbb9cb8/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/c/4/c/0/c4ce4a32ff5227a9452f9333233588d9.mp3?hdnea=exp=1790682620~acl=/api/1/1/c/4/c/0/c4ce4a32ff5227a9452f9333233588d9.mp3*~data=user_id=0,application_id=42~hmac=3a4b65800dc79dad83da89b0be76824d47e06557a8b389e3bf29877969e8a6d2",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 2,
+    "album": "Abbey Road (Remastered)",
+    "artista": "The Beatles",
+    "faixa": "Come Together (Remastered 2009)",
+    "url": "https://www.deezer.com/track/116348452",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/aa94ab293730bb7845d2aa8c672b2c29/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/b/2/2/0/b2215e49d659c178394641df9945e645.mp3?hdnea=exp=1790682620~acl=/api/1/1/b/2/2/0/b2215e49d659c178394641df9945e645.mp3*~data=user_id=0,application_id=42~hmac=0c85f5cd4f4882f3be7c90bbf2d87d948080f70a798232691d89c68b91a21471",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 3,
+    "album": "Thriller",
+    "artista": "Michael Jackson",
+    "faixa": "Thriller",
+    "url": "https://www.deezer.com/track/831319",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/f01e09ceb8ad1e96707c1b4aadb5911b/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/c/e/8/0/ce885422ef0a3fa79181a69d15e92db7.mp3?hdnea=exp=1790682620~acl=/api/1/1/c/e/8/0/ce885422ef0a3fa79181a69d15e92db7.mp3*~data=user_id=0,application_id=42~hmac=b8a712a8e0f484163413b851fb3fea5f41e5bae0defc526f6980910d967d1cad",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 4,
+    "album": "Nevermind (Remastered)",
+    "artista": "Nirvana",
+    "faixa": "Smells Like Teen Spirit",
+    "url": "https://www.deezer.com/track/13791930",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/f0282817b697279e56df13909962a54a/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/3/4/b/0/34bad352aa1aa0f8eecbbc9c27a40eaf.mp3?hdnea=exp=1790682620~acl=/api/1/1/3/4/b/0/34bad352aa1aa0f8eecbbc9c27a40eaf.mp3*~data=user_id=0,application_id=42~hmac=a8cf78f7d7edbad8b1d7134d09781017541cd1724dbb3056fb233499f999fb88",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 5,
+    "album": "Rumours",
+    "artista": "Fleetwood Mac",
+    "faixa": "Dreams (2004 Remaster)",
+    "url": "https://www.deezer.com/track/63480987",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/9732751ce91d786dcf30069853697078/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/9/f/3/0/9f3c661f9f58a75fe6e7aeb77b1b314c.mp3?hdnea=exp=1790682620~acl=/api/1/1/9/f/3/0/9f3c661f9f58a75fe6e7aeb77b1b314c.mp3*~data=user_id=0,application_id=42~hmac=be258c848ab52de285764fe1088d8a51c81a34d6135b3258b8005e43d6179820",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 6,
+    "album": "Kind Of Blue",
+    "artista": "Miles Davis",
+    "faixa": "So What (feat. John Coltrane, Cannonball Adderley & Bill Evans)",
+    "url": "https://www.deezer.com/track/15599529",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/88aec77a2c4a8ed8dd3c709a9fe418bc/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/2/f/b/0/2fb28eeaa6a83dde6aef73085f64966b.mp3?hdnea=exp=1790682620~acl=/api/1/1/2/f/b/0/2fb28eeaa6a83dde6aef73085f64966b.mp3*~data=user_id=0,application_id=42~hmac=34a0542c5a3fe0eaa3baafde2915aace6ec108de77b73f8b944c96e76bcfb13c",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 7,
+    "album": "Purple Rain",
+    "artista": "Prince",
+    "faixa": "Purple Rain",
+    "url": "https://www.deezer.com/track/2806039702",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/526d2d27a16da94b6f46fa4e786a34c9/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/7/5/7/0/757313f7edf47e05964053735ab6208a.mp3?hdnea=exp=1790682620~acl=/api/1/1/7/5/7/0/757313f7edf47e05964053735ab6208a.mp3*~data=user_id=0,application_id=42~hmac=a96bcdedbbd4253f6230d6b40b24f64b302cb0d9abb2070260f5fde2a68d2dd4",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 8,
+    "album": "A Night At The Opera",
+    "artista": "Queen",
+    "faixa": "Bohemian Rhapsody",
+    "url": "https://www.deezer.com/track/4091937401",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/0b56f4eee05fa1ea753c5654b2cdb70c/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/5/f/9/0/5f9a6a2ea1876e6d07c4b7feefa99951.mp3?hdnea=exp=1790682621~acl=/api/1/1/5/f/9/0/5f9a6a2ea1876e6d07c4b7feefa99951.mp3*~data=user_id=0,application_id=42~hmac=2f5903c0da07e7abdde52e26dcff4c4f490010c099305ad9bc22ef641c061007",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 9,
+    "album": "The Miseducation of Lauryn Hill",
+    "artista": "Ms. Lauryn Hill",
+    "faixa": "Doo Wop (That Thing)",
+    "url": "https://www.deezer.com/track/400418902",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/79ea9d5f45c41d82e511c59f0bd8fc5a/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/c/9/a/0/c9a73ca9e6e9a793aead62c99f176a94.mp3?hdnea=exp=1790682621~acl=/api/1/1/c/9/a/0/c9a73ca9e6e9a793aead62c99f176a94.mp3*~data=user_id=0,application_id=42~hmac=8c74a7c28ab18b43c3ef7fc7b994a7fe277b309091711f8bf296496059c4ba3e",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 10,
+    "album": "Clube Da Esquina",
+    "artista": "Milton Nascimento",
+    "faixa": "Tudo O Que Você Podia Ser",
+    "url": "https://www.deezer.com/track/716531362",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/8b76155248e45a194fb6adb70a63ca2c/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/c/9/d/0/c9d68e4b7fe1fb4f68aced0adb278d65.mp3?hdnea=exp=1790682621~acl=/api/1/1/c/9/d/0/c9d68e4b7fe1fb4f68aced0adb278d65.mp3*~data=user_id=0,application_id=42~hmac=f7f873fcd2c350475e1071bc2759db2d6f0df6ab9fe20a7e0fd1919f3050e5ab",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 11,
+    "album": "Legião Urbana",
+    "artista": "Legião Urbana",
+    "faixa": "Será",
+    "url": "https://www.deezer.com/track/3530731",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/fa0acf2d8b1dfa5a207f4d2f51d21d4f/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/a/5/0/0/a50bb78a83e817d3c9a0a15421772f59.mp3?hdnea=exp=1790682621~acl=/api/1/1/a/5/0/0/a50bb78a83e817d3c9a0a15421772f59.mp3*~data=user_id=0,application_id=42~hmac=a7eff365ac61566402b88a4b08e9890cfe012ced7edb4a11bb1081764a001b16",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 12,
+    "album": "Raimundos",
+    "artista": "Raimundos",
+    "faixa": "Selim",
+    "url": "https://www.deezer.com/track/80134952",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/b1d4697b9cc76bfc7e12fe729d98beed/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/5/3/3/0/53374c567c0ce933b067fdbc6095ad53.mp3?hdnea=exp=1790682622~acl=/api/1/1/5/3/3/0/53374c567c0ce933b067fdbc6095ad53.mp3*~data=user_id=0,application_id=42~hmac=2ab1139ba7490481dbc70ca353c99d334e405e3853870e604d1a1c324e838cfd",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 13,
+    "album": "Sobrevivendo no Inferno",
+    "artista": "Racionais MC's",
+    "faixa": "Jorge da Capadócia",
+    "url": "https://www.deezer.com/track/140639829",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/bc55cb71a6da7f0c41f1dc184280fe32/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/1/e/0/0/1e0cf49cde8a87bf93afaa718ea77589.mp3?hdnea=exp=1790682622~acl=/api/1/1/1/e/0/0/1e0cf49cde8a87bf93afaa718ea77589.mp3*~data=user_id=0,application_id=42~hmac=463dfe468c2d0d75c1e2d98504b365792ee2645afa57be405302b6add33eadde",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 14,
+    "album": "Discovery",
+    "artista": "Daft Punk",
+    "faixa": "One More Time",
+    "url": "https://www.deezer.com/track/3135553",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/5718f7c81c27e0b2417e2a4c45224f8a/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/f/8/c/0/f8c5dc3837912dba37c9a1ab3170cc3f.mp3?hdnea=exp=1790682622~acl=/api/1/1/f/8/c/0/f8c5dc3837912dba37c9a1ab3170cc3f.mp3*~data=user_id=0,application_id=42~hmac=46e37e2a1165bf7d44908db0a64d67d4e9700b3879b94328c781062362477a2c",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 15,
+    "album": "Back In Black",
+    "artista": "AC/DC",
+    "faixa": "Back In Black",
+    "url": "https://www.deezer.com/track/92720046",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/41041b14873956eff0459c8ea2c296a8/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/8/2/b/0/82be918b42c3d26093b20d01e97e4a03.mp3?hdnea=exp=1790682622~acl=/api/1/1/8/2/b/0/82be918b42c3d26093b20d01e97e4a03.mp3*~data=user_id=0,application_id=42~hmac=25bd868e6f29ae7a9b0e7a56aae4fce0fada9216030d8fba70c891dec7bd8d2f",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 16,
+    "album": "The Chronic",
+    "artista": "Dr. Dre",
+    "faixa": "Nuthin' But A \"G\" Thang",
+    "url": "https://www.deezer.com/track/2132919007",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/36cffacf94fdcc49921affe8a865f6f1/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/8/b/e/0/8be7509f231eb8a3716f231b6b5c1603.mp3?hdnea=exp=1790682622~acl=/api/1/1/8/b/e/0/8be7509f231eb8a3716f231b6b5c1603.mp3*~data=user_id=0,application_id=42~hmac=10c2a4d4ce98643aa492ba3475bc8616a001f54118a54717cc29a52cf9af270b",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 17,
+    "album": "Elvis Presley",
+    "artista": "Elvis Presley",
+    "faixa": "Blue Suede Shoes",
+    "url": "https://www.deezer.com/track/69070922",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/8da05cbe5fece7dc8fd05a111b3b45c5/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/e/a/d/0/eadc63f333af7027d997fd1b299f6653.mp3?hdnea=exp=1790682623~acl=/api/1/1/e/a/d/0/eadc63f333af7027d997fd1b299f6653.mp3*~data=user_id=0,application_id=42~hmac=d193fdd2ee9b22bbdce4222518cf8d77e6a8918c35eb33cf89844e612ef8df28",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 18,
+    "album": "Back To Black",
+    "artista": "Amy Winehouse",
+    "faixa": "Back To Black",
+    "url": "https://www.deezer.com/track/2176856",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/5772b495f0dcdf660d0fc88c4c38a3fa/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/8/c/5/0/8c51a0c8941f72ee783a7b2798cff8c8.mp3?hdnea=exp=1790682623~acl=/api/1/1/8/c/5/0/8c51a0c8941f72ee783a7b2798cff8c8.mp3*~data=user_id=0,application_id=42~hmac=331ad2398e341f5cec968862fae30a2251e400327f9533c77d25f3721f466ac0",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 19,
+    "album": "Lemonade",
+    "artista": "Beyoncé",
+    "faixa": "Formation",
+    "url": "https://www.deezer.com/track/669486732",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/4d45ee37ae8c1f8e7201d1d1d9d7c839/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/1/9/b/0/19b643cfde30425b635e5ab8ce22f5bc.mp3?hdnea=exp=1790682623~acl=/api/1/1/1/9/b/0/19b643cfde30425b635e5ab8ce22f5bc.mp3*~data=user_id=0,application_id=42~hmac=0a7103496b1db4b42c30ceb63bd8f01755e77d20e365e06260d6a65552f97fd8",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  },
+  {
+    "codigo": 20,
+    "album": "Spice",
+    "artista": "Spice Girls",
+    "faixa": "Wannabe",
+    "url": "https://www.deezer.com/track/3133738",
+    "capa": "https://cdn-images.dzcdn.net/images/cover/18c4f2d9608910a2b8eb1835052e895b/500x500-000000-80-0-0.jpg",
+    "previa": "https://cdnt-preview.dzcdn.net/api/1/1/b/8/c/0/b8cac96000eea3ee3fb1c6c363c2d95e.mp3?hdnea=exp=1790682623~acl=/api/1/1/b/8/c/0/b8cac96000eea3ee3fb1c6c363c2d95e.mp3*~data=user_id=0,application_id=42~hmac=6311940da0aa056a414b7c1f49a521c9d6929130cd821bbef0f7a50b96502f95",
+    "fonte": "Deezer",
+    "obtidoEm": "2026-09-29"
+  }
+]

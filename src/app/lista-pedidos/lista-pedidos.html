@@ -1,0 +1,28 @@
+<h3>Meus Pedidos</h3>
+
+<div class="alert alert-secondary" *ngIf="lista.length==0">
+    Você ainda não fez nenhum pedido. <a href="/">Ver vitrine</a>
+</div>
+
+<div class="table-responsive" *ngIf="lista.length>0">
+<table class="table table-hover align-middle">
+    <thead>
+        <tr>
+            <th>Pedido</th>
+            <th>Data</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of lista">
+            <td>#{{p.numero}}</td>
+            <td>{{p.data}}</td>
+            <td><span class="badge text-bg-success">{{p.status}}</span></td>
+            <td>{{formatar(p.total)}}</td>
+            <td><button class="btn btn-outline-info btn-sm" (click)="verDetalhe(p)">ver detalhes</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
