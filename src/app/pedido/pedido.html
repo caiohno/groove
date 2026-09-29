@@ -1,33 +1,44 @@
-<div *ngIf="obj.numero>0">
-    <h3>Pedido #{{obj.numero}}</h3>
-    <p>Data: {{obj.data}} &mdash; Status: <span class="badge text-bg-success">{{obj.status}}</span></p>
+<div *ngIf="obj.numero > 0">
+  <h3>Pedido #{{ obj.numero }}</h3>
+  <p>
+    Data: {{ obj.data }} &mdash; Status: <span class="badge text-bg-success">{{ obj.status }}</span>
+  </p>
 
-    <div class="table-responsive">
+  <div class="table-responsive">
     <table class="table table-hover align-middle">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Item</th>
-                <th>Qtd</th>
-                <th>Valor</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of obj.itens">
-                <td><img src="{{item.produto.codigo}}.png" alt="Capa de {{item.produto.nome}}" class="w-100" style="max-width: 90px;"></td>
-                <td><b>{{item.produto.nome}}</b></td>
-                <td>{{item.qtd}}x</td>
-                <td>{{formatar(item.valorTotal)}}</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3" class="text-end"><b>TOTAL</b></td>
-                <td class="fw-bold">{{formatar(obj.total)}}</td>
-            </tr>
-        </tfoot>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Item</th>
+          <th>Qtd</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of obj.itens">
+          <td>
+            <img
+              src="{{ item.produto.codigo }}.png"
+              alt="Capa de {{ item.produto.nome }}"
+              class="w-100"
+              style="max-width: 90px"
+            />
+          </td>
+          <td>
+            <b>{{ item.produto.nome }}</b>
+          </td>
+          <td>{{ item.qtd }}x</td>
+          <td>{{ formatar(item.valorTotal) }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" class="text-end"><b>TOTAL</b></td>
+          <td class="fw-bold">{{ formatar(obj.total) }}</td>
+        </tr>
+      </tfoot>
     </table>
-    </div>
+  </div>
 
-    <a href="./pedidos" class="btn btn-outline-info">voltar para meus pedidos</a>
+  <a href="./pedidos" class="btn btn-outline-info">voltar para meus pedidos</a>
 </div>

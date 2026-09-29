@@ -20,21 +20,26 @@ export class ResultadoBusca {
   ngOnInit() {
     if (!this.ehNavegador) return;
 
-    this.termo = new URLSearchParams(location.search).get('q') ?? localStorage.getItem('buscaTermo') ?? '';
-    const normalizar = (texto: string) => texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    this.termo =
+      new URLSearchParams(location.search).get('q') ?? localStorage.getItem('buscaTermo') ?? '';
+    const normalizar = (texto: string) =>
+      texto
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
     const alvo = normalizar(this.termo);
-    this.lista = this.produtoService.lista.filter(p =>
-      normalizar(p.nome).includes(alvo) || normalizar(p.keywords).includes(alvo)
+    this.lista = this.produtoService.lista.filter(
+      (p) => normalizar(p.nome).includes(alvo) || normalizar(p.keywords).includes(alvo),
     );
   }
 
   verDetalhe(obj: Produto) {
-    localStorage.setItem("produto", JSON.stringify(obj));
-    location.href = "./detalhe?codigo=" + obj.codigo;
+    localStorage.setItem('produto', JSON.stringify(obj));
+    location.href = './detalhe?codigo=' + obj.codigo;
   }
 
   comprar(obj: Produto) {
     this.cestaService.adicionar(obj);
-    location.href = "./cesta";
+    location.href = './cesta';
   }
 }

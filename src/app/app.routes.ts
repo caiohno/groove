@@ -9,11 +9,14 @@ import { Pedido } from './pedido/pedido';
 import { ResultadoBusca } from './resultado-busca/resultado-busca';
 import { ListaPedidos } from './lista-pedidos/lista-pedidos';
 export const routes: Routes = [
-    {path:"", component:Vitrine}, {path:"promo", component:Vitrine},
-    {path:"detalhe", component:Detalhe}, {path:"login", component:Login},
-    {path:"cesta", component:Cesta}, {path:"pedido", component:Pedido},
-    {path:"pedidos", component:ListaPedidos}, 
-    {path:"cadastro", component:Cadastro}, 
-    {path:"reenvio", component:Reenvio},
-    {path:"busca", component:ResultadoBusca}
+  { path: '', component: Vitrine },
+  { path: 'promo', component: Vitrine },
+  { path: 'detalhe', component: Detalhe },
+  { path: 'login', component: Login },
+  { path: 'cesta', component: Cesta },
+  { path: 'pedido', component: Pedido },
+  { path: 'pedidos', component: ListaPedidos },
+  { path: 'cadastro', component: Cadastro },
+  { path: 'reenvio', component: Reenvio },
+  { path: 'busca', component: ResultadoBusca },
 ];

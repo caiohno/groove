@@ -9,19 +9,19 @@ import { CommonModule } from '@angular/common';
 export class Reenvio {
   enviado = false;
   erro = false;
-  emailEnviado = "";
+  emailEnviado = '';
 
   enviar(email: string) {
     const valor = email.trim();
     const valido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
     this.erro = !valido;
     this.enviado = valido;
-    this.emailEnviado = valido ? valor : "";
+    this.emailEnviado = valido ? valor : '';
   }
 
   tentarNovamente() {
     this.enviado = false;
     this.erro = false;
-    this.emailEnviado = "";
+    this.emailEnviado = '';
   }
 }

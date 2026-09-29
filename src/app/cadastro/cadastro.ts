@@ -21,7 +21,7 @@ export class Cadastro {
     email: string,
     senha: string,
     telefone: string,
-    endereco: string
+    endereco: string,
   ) {
     this.tentouSalvar = true;
     this.enviado = false;

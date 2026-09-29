@@ -11,35 +11,39 @@ import { CestaService } from '../service/cesta.service';
   templateUrl: './detalhe.html',
 })
 export class Detalhe {
-    obj:Produto = new Produto();
-    readonly produtoService = inject(ProdutoService);
-    erroAudio = false;
-    mensagem: string = "";
-    private ehNavegador = isPlatformBrowser(inject(PLATFORM_ID));
-    private cestaService = inject(CestaService);
+  obj: Produto = new Produto();
+  readonly produtoService = inject(ProdutoService);
+  erroAudio = false;
+  mensagem: string = '';
+  private ehNavegador = isPlatformBrowser(inject(PLATFORM_ID));
+  private cestaService = inject(CestaService);
 
-    ngOnInit(){
-      if(!this.ehNavegador) return;
+  ngOnInit() {
+    if (!this.ehNavegador) return;
 
-      const codigoUrl = new URLSearchParams(location.search).get('codigo');
-      let codigo = Number(codigoUrl);
-      if (!codigoUrl) {
-        try { codigo = JSON.parse(localStorage.getItem('produto') ?? '{}').codigo; } catch { codigo = 0; }
-      }
-      const produto = this.produtoService.lista.find(p => p.codigo === codigo);
-      if (produto) this.obj = produto;
-      else this.mensagem = 'Disco não encontrado. Volte ao catálogo para escolher outro.';
-    }
-
-    formatar(valor: number): string {
-      return this.cestaService.formatar(valor);
-    }
-
-    comprar(){
-      if (this.cestaService.adicionar(this.obj)) {
-        location.href = "./cesta";
-      } else {
-        this.mensagem = "Você já colocou na cesta todas as unidades disponíveis deste produto.";
+    const codigoUrl = new URLSearchParams(location.search).get('codigo');
+    let codigo = Number(codigoUrl);
+    if (!codigoUrl) {
+      try {
+        codigo = JSON.parse(localStorage.getItem('produto') ?? '{}').codigo;
+      } catch {
+        codigo = 0;
       }
     }
+    const produto = this.produtoService.lista.find((p) => p.codigo === codigo);
+    if (produto) this.obj = produto;
+    else this.mensagem = 'Disco não encontrado. Volte ao catálogo para escolher outro.';
+  }
+
+  formatar(valor: number): string {
+    return this.cestaService.formatar(valor);
+  }
+
+  comprar() {
+    if (this.cestaService.adicionar(this.obj)) {
+      location.href = './cesta';
+    } else {
+      this.mensagem = 'Você já colocou na cesta todas as unidades disponíveis deste produto.';
+    }
+  }
 }

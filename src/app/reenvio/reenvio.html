@@ -1,30 +1,53 @@
-<div class="auth-shell"><aside class="auth-aside"><div><span class="eyebrow">BEM-VINDO À GROOVE</span><h2>Sua próxima<br>descoberta<br>começa aqui.</h2><p>Uma conta. Muitos discos.<br>Todo um universo para ouvir.</p></div><div class="auth-disc" aria-hidden="true"></div></aside><section class="auth-content"><span class="eyebrow">VAMOS RECONECTAR</span><h1>Esqueceu a senha?</h1>
+<div class="auth-shell">
+  <aside class="auth-aside">
+    <div>
+      <span class="eyebrow">BEM-VINDO À GROOVE</span>
+      <h2>Sua próxima<br />descoberta<br />começa aqui.</h2>
+      <p>Uma conta. Muitos discos.<br />Todo um universo para ouvir.</p>
+    </div>
+    <div class="auth-disc" aria-hidden="true"></div>
+  </aside>
+  <section class="auth-content">
+    <span class="eyebrow">VAMOS RECONECTAR</span>
+    <h1>Esqueceu a senha?</h1>
 
-<div class="mt-4">
-
-    <div *ngIf="!enviado">
+    <div class="mt-4">
+      <div *ngIf="!enviado">
         <p class="fw-bold text-center">Informe o seu e-mail</p>
         <p class="text-muted small text-center">
-            Vamos simular o envio das instruções de recuperação de senha para esse e-mail.
+          Vamos simular o envio das instruções de recuperação de senha para esse e-mail.
         </p>
 
         <label class="form-label" for="txtEmail">E-mail</label>
-        <input #campoEmail type="email" id="txtEmail" class="form-control" [class.is-invalid]="erro"
-            placeholder="ex: nome@email.com" required
-            [attr.aria-invalid]="erro" aria-describedby="erroEmail"
-            (keyup.enter)="enviar(campoEmail.value)">
-        <div id="erroEmail" class="invalid-feedback" role="alert" *ngIf="erro">Informe um e-mail válido.</div>
+        <input
+          #campoEmail
+          type="email"
+          id="txtEmail"
+          class="form-control"
+          [class.is-invalid]="erro"
+          placeholder="ex: nome@email.com"
+          required
+          [attr.aria-invalid]="erro"
+          aria-describedby="erroEmail"
+          (keyup.enter)="enviar(campoEmail.value)"
+        />
+        <div id="erroEmail" class="invalid-feedback" role="alert" *ngIf="erro">
+          Informe um e-mail válido.
+        </div>
 
-        <button class="btn btn-success w-100 mt-3" (click)="enviar(campoEmail.value)">Enviar instruções</button>
-    </div>
+        <button class="btn btn-success w-100 mt-3" (click)="enviar(campoEmail.value)">
+          Enviar instruções
+        </button>
+      </div>
 
-    <div *ngIf="enviado" class="text-center">
+      <div *ngIf="enviado" class="text-center">
         <div class="alert alert-success" role="status">
-            Simulação concluída para <b>{{emailEnviado}}</b>. Neste projeto demonstrativo, nenhum e-mail é enviado.
+          Simulação concluída para <b>{{ emailEnviado }}</b
+          >. Neste projeto demonstrativo, nenhum e-mail é enviado.
         </div>
         <a href="login" class="btn btn-outline-primary w-100">Voltar para o login</a>
         <button class="btn btn-link" (click)="tentarNovamente()">usar outro e-mail</button>
+      </div>
     </div>
-
+  </section>
 </div>
-</section></div>

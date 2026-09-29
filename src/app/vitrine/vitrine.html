@@ -1,16 +1,113 @@
 <section class="hero" *ngIf="!soPromocoes">
-  <div class="hero-copy"><span class="eyebrow">O SOM TEM OUTRO RITMO POR AQUI</span><h1>Algumas coisas<br>ficam melhores<br><em>em vinil.</em></h1><p>O ritual de escolher. O prazer de ouvir.<br>Encontre o disco que vai fazer parte da sua história.</p><a class="btn btn-primary" href="#catalogo">Encontre seu próximo disco <span>↗</span></a><div class="hero-note"><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> Aperte o play. Sinta o groove.</div></div>
-  <button class="hero-art" (click)="verDetalhe(discoHero)" [attr.aria-label]="'Conheça ' + discoHero.nome"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="vinyl"><span>groove<br>33⅓ RPM</span></span><img [src]="discoHero.codigo + '.png'" [alt]="'Capa de ' + discoHero.nome" width="500" height="500" fetchpriority="high"><span class="hero-label"><span>NA NOSSA VITROLA</span><strong>{{ produtoService.titulo(discoHero) }}</strong><span>{{ produtoService.artista(discoHero) }} <b>↗</b></span></span></button>
-</section>
-<div class="listening-strip" *ngIf="!soPromocoes"><span>◎ <b>Clássicos e descobertas</b></span><span>♫ <b>Ouça antes de escolher</b></span><span>↗ <b>Sua coleção começa aqui</b></span></div>
-<section class="catalog-section" id="destaques" *ngIf="!soPromocoes"><div class="section-heading"><div><span class="eyebrow">SELEÇÃO GROOVE</span><h2>Discos que merecem o play.</h2></div><a href="#catalogo">Explorar todos ↗</a></div><div class="record-grid"><ng-container *ngTemplateOutlet="discos; context: { $implicit: destaques }" /></div></section>
-<section class="catalog-section" id="catalogo"><div class="section-heading"><div><span class="eyebrow">{{ soPromocoes ? 'BONS DISCOS, NOVOS PREÇOS' : 'ENCONTRE O SEU SOM' }}</span><h2>{{ soPromocoes ? 'Promoções' : 'Todos os discos' }}</h2><p>{{ lista.length }} discos para descobrir, ouvir e colecionar.</p></div><span class="catalog-tag">VINIL · 33⅓ RPM</span></div><div class="record-grid"><ng-container *ngTemplateOutlet="discos; context: { $implicit: lista }" /></div></section>
-<div class="closing-note"><span class="eyebrow">DO LADO A AO LADO B</span><h2>Mais que ouvir.<br><em>Ter por perto.</em></h2><p>Uma capa na estante. Uma história na memória.<br>O próximo disco da sua coleção pode estar aqui.</p></div>
-<ng-template #discos let-produtos><article class="record-card" *ngFor="let obj of produtos">
-  <button class="cover-button" (click)="verDetalhe(obj)" [attr.aria-label]="'Ouvir e conhecer ' + obj.nome"><img [src]="obj.codigo + '.png'" [alt]="'Capa de ' + obj.nome" width="500" height="500" loading="lazy"><span class="cover-hint">↗ Ouça uma prévia</span></button>
-  <div class="record-copy"><h3>{{ produtoService.titulo(obj) }}</h3><p class="artist">{{ produtoService.artista(obj) }}</p>
-    <div class="old-price"><s *ngIf="obj.valorPromo > 0">{{ produtoService.formatar(obj.valor) }}</s><span *ngIf="obj.valorPromo === 0">Disco de vinil</span></div>
-    <div class="price-line"><span class="price">{{ produtoService.formatar(obj.valorPromo > 0 ? obj.valorPromo : obj.valor) }}</span><span class="discount" *ngIf="obj.valorPromo > 0">-{{ produtoService.calcularDesconto(obj.valor, obj.valorPromo) }}% OFF</span></div>
-    <div class="card-actions"><button class="btn btn-outline-secondary" (click)="verDetalhe(obj)">Ver disco</button><button class="btn btn-primary" *ngIf="obj.quantidade > 0" (click)="comprar(obj)">Adicionar +</button><span class="stock-note" *ngIf="obj.quantidade === 0">Esgotado</span></div>
+  <div class="hero-copy">
+    <span class="eyebrow">O SOM TEM OUTRO RITMO POR AQUI</span>
+    <h1>Algumas coisas<br />ficam melhores<br /><em>em vinil.</em></h1>
+    <p>
+      O ritual de escolher. O prazer de ouvir.<br />Encontre o disco que vai fazer parte da sua
+      história.
+    </p>
+    <a class="btn btn-primary" href="#catalogo">Encontre seu próximo disco <span>↗</span></a>
+    <div class="hero-note">
+      <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> Aperte
+      o play. Sinta o groove.
+    </div>
   </div>
-</article></ng-template>
+  <button
+    class="hero-art"
+    (click)="verDetalhe(discoHero)"
+    [attr.aria-label]="'Conheça ' + discoHero.nome"
+  >
+    <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span
+    ><span class="vinyl"
+      ><span>groove<br />33⅓ RPM</span></span
+    ><img
+      [src]="discoHero.codigo + '.png'"
+      [alt]="'Capa de ' + discoHero.nome"
+      width="500"
+      height="500"
+      fetchpriority="high"
+    /><span class="hero-label"
+      ><span>NA NOSSA VITROLA</span><strong>{{ produtoService.titulo(discoHero) }}</strong
+      ><span>{{ produtoService.artista(discoHero) }} <b>↗</b></span></span
+    >
+  </button>
+</section>
+<div class="listening-strip" *ngIf="!soPromocoes">
+  <span>◎ <b>Clássicos e descobertas</b></span
+  ><span>♫ <b>Ouça antes de escolher</b></span
+  ><span>↗ <b>Sua coleção começa aqui</b></span>
+</div>
+<section class="catalog-section" id="destaques" *ngIf="!soPromocoes">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">SELEÇÃO GROOVE</span>
+      <h2>Discos que merecem o play.</h2>
+    </div>
+    <a href="#catalogo">Explorar todos ↗</a>
+  </div>
+  <div class="record-grid">
+    <ng-container *ngTemplateOutlet="discos; context: { $implicit: destaques }" />
+  </div>
+</section>
+<section class="catalog-section" id="catalogo">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">{{
+        soPromocoes ? 'BONS DISCOS, NOVOS PREÇOS' : 'ENCONTRE O SEU SOM'
+      }}</span>
+      <h2>{{ soPromocoes ? 'Promoções' : 'Todos os discos' }}</h2>
+      <p>{{ lista.length }} discos para descobrir, ouvir e colecionar.</p>
+    </div>
+    <span class="catalog-tag">VINIL · 33⅓ RPM</span>
+  </div>
+  <div class="record-grid">
+    <ng-container *ngTemplateOutlet="discos; context: { $implicit: lista }" />
+  </div>
+</section>
+<div class="closing-note">
+  <span class="eyebrow">DO LADO A AO LADO B</span>
+  <h2>Mais que ouvir.<br /><em>Ter por perto.</em></h2>
+  <p>
+    Uma capa na estante. Uma história na memória.<br />O próximo disco da sua coleção pode estar
+    aqui.
+  </p>
+</div>
+<ng-template #discos let-produtos
+  ><article class="record-card" *ngFor="let obj of produtos">
+    <button
+      class="cover-button"
+      (click)="verDetalhe(obj)"
+      [attr.aria-label]="'Ouvir e conhecer ' + obj.nome"
+    >
+      <img
+        [src]="obj.codigo + '.png'"
+        [alt]="'Capa de ' + obj.nome"
+        width="500"
+        height="500"
+        loading="lazy"
+      /><span class="cover-hint">↗ Ouça uma prévia</span>
+    </button>
+    <div class="record-copy">
+      <h3>{{ produtoService.titulo(obj) }}</h3>
+      <p class="artist">{{ produtoService.artista(obj) }}</p>
+      <div class="old-price">
+        <s *ngIf="obj.valorPromo > 0">{{ produtoService.formatar(obj.valor) }}</s
+        ><span *ngIf="obj.valorPromo === 0">Disco de vinil</span>
+      </div>
+      <div class="price-line">
+        <span class="price">{{
+          produtoService.formatar(obj.valorPromo > 0 ? obj.valorPromo : obj.valor)
+        }}</span
+        ><span class="discount" *ngIf="obj.valorPromo > 0"
+          >-{{ produtoService.calcularDesconto(obj.valor, obj.valorPromo) }}% OFF</span
+        >
+      </div>
+      <div class="card-actions">
+        <button class="btn btn-outline-secondary" (click)="verDetalhe(obj)">Ver disco</button
+        ><button class="btn btn-primary" *ngIf="obj.quantidade > 0" (click)="comprar(obj)">
+          Adicionar +</button
+        ><span class="stock-note" *ngIf="obj.quantidade === 0">Esgotado</span>
+      </div>
+    </div>
+  </article></ng-template
+>

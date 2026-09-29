@@ -1,37 +1,120 @@
-<div class="auth-shell"><aside class="auth-aside"><div><span class="eyebrow">BEM-VINDO À GROOVE</span><h2>Sua próxima<br>descoberta<br>começa aqui.</h2><p>Uma conta. Muitos discos.<br>Todo um universo para ouvir.</p></div><div class="auth-disc" aria-hidden="true"></div></aside><section class="auth-content"><span class="eyebrow">SEU LUGAR NA GROOVE</span><h1>Vamos começar?</h1><p>Crie sua conta e encontre seus próximos favoritos.</p>
-<div class="alert alert-success" *ngIf="enviado">Cadastro salvo com sucesso! <a href="login">Entrar na minha conta</a></div>
+<div class="auth-shell">
+  <aside class="auth-aside">
+    <div>
+      <span class="eyebrow">BEM-VINDO À GROOVE</span>
+      <h2>Sua próxima<br />descoberta<br />começa aqui.</h2>
+      <p>Uma conta. Muitos discos.<br />Todo um universo para ouvir.</p>
+    </div>
+    <div class="auth-disc" aria-hidden="true"></div>
+  </aside>
+  <section class="auth-content">
+    <span class="eyebrow">SEU LUGAR NA GROOVE</span>
+    <h1>Vamos começar?</h1>
+    <p>Crie sua conta e encontre seus próximos favoritos.</p>
+    <div class="alert alert-success" *ngIf="enviado">
+      Cadastro salvo com sucesso! <a href="login">Entrar na minha conta</a>
+    </div>
 
-<form #f novalidate [class.was-validated]="tentouSalvar" (submit)="$event.preventDefault(); salvar(f, campoNome.value, campoCPF.value, campoEmail.value, campoSenha.value, campoTelefone.value, campoEndereco.value)">
-    <label class="form-label" for="txtNome">Nome:</label>
-    <input #campoNome type="text" id="txtNome" autocomplete="name" class="form-control" required placeholder="Seu nome completo">
-    <div class="invalid-feedback">Nome é obrigatório!</div>
+    <form
+      #f
+      novalidate
+      [class.was-validated]="tentouSalvar"
+      (submit)="
+        $event.preventDefault();
+        salvar(
+          f,
+          campoNome.value,
+          campoCPF.value,
+          campoEmail.value,
+          campoSenha.value,
+          campoTelefone.value,
+          campoEndereco.value
+        )
+      "
+    >
+      <label class="form-label" for="txtNome">Nome:</label>
+      <input
+        #campoNome
+        type="text"
+        id="txtNome"
+        autocomplete="name"
+        class="form-control"
+        required
+        placeholder="Seu nome completo"
+      />
+      <div class="invalid-feedback">Nome é obrigatório!</div>
 
-    <label class="form-label" for="txtCPF">CPF</label>
-    <input #campoCPF type="text" id="txtCPF" autocomplete="off" class="form-control" required pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="ex: 999.999.999-99">
-    <div class="invalid-feedback">Informe o CPF no formato 999.999.999-99.</div>
+      <label class="form-label" for="txtCPF">CPF</label>
+      <input
+        #campoCPF
+        type="text"
+        id="txtCPF"
+        autocomplete="off"
+        class="form-control"
+        required
+        pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+        placeholder="ex: 999.999.999-99"
+      />
+      <div class="invalid-feedback">Informe o CPF no formato 999.999.999-99.</div>
 
-    <label class="form-label" for="txtEmail">E-mail:</label>
-    <input #campoEmail type="email" id="txtEmail" autocomplete="email" class="form-control" required placeholder="voce@email.com">
-    <div class="invalid-feedback">Email é obrigatório!</div>
+      <label class="form-label" for="txtEmail">E-mail:</label>
+      <input
+        #campoEmail
+        type="email"
+        id="txtEmail"
+        autocomplete="email"
+        class="form-control"
+        required
+        placeholder="voce@email.com"
+      />
+      <div class="invalid-feedback">Email é obrigatório!</div>
 
-    <label class="form-label" for="txtSenha">Senha:</label>
-    <input #campoSenha type="password" id="txtSenha" autocomplete="new-password" class="form-control" required
-    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" placeholder="Crie uma senha forte">
-    <p class="small muted mt-2 mb-0">Use 8 caracteres ou mais, com maiúscula, minúscula, número e símbolo (&#64;$!%*?&amp;).</p>
-    <div class="invalid-feedback">A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial (@$!%*?&).</div>
+      <label class="form-label" for="txtSenha">Senha:</label>
+      <input
+        #campoSenha
+        type="password"
+        id="txtSenha"
+        autocomplete="new-password"
+        class="form-control"
+        required
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+        placeholder="Crie uma senha forte"
+      />
+      <p class="small muted mt-2 mb-0">
+        Use 8 caracteres ou mais, com maiúscula, minúscula, número e símbolo (&#64;$!%*?&amp;).
+      </p>
+      <div class="invalid-feedback">
+        A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra
+        minúscula, um número e um caractere especial (@$!%*?&).
+      </div>
 
-    <label class="form-label" for="txtTelefone">Telefone:</label>
-    <input #campoTelefone type="text" id="txtTelefone" autocomplete="tel-local" class="form-control" required
-    pattern="[0-9]{4,5}-[0-9]{4}" placeholder="ex: 99999-9999">
-    <div class="invalid-feedback">Informe um telefone valido!</div>
+      <label class="form-label" for="txtTelefone">Telefone:</label>
+      <input
+        #campoTelefone
+        type="text"
+        id="txtTelefone"
+        autocomplete="tel-local"
+        class="form-control"
+        required
+        pattern="[0-9]{4,5}-[0-9]{4}"
+        placeholder="ex: 99999-9999"
+      />
+      <div class="invalid-feedback">Informe um telefone valido!</div>
 
-    <label class="form-label" for="txtEndereco">Endereço:</label>
-    <textarea #campoEndereco id="txtEndereco" autocomplete="street-address" class="form-control" required rows="3"
-    placeholder="ex: Rua Frei João, 59 - Ipiranga, São Paulo"></textarea>
-    <div class="invalid-feedback">Informe um endereço completo!</div>
+      <label class="form-label" for="txtEndereco">Endereço:</label>
+      <textarea
+        #campoEndereco
+        id="txtEndereco"
+        autocomplete="street-address"
+        class="form-control"
+        required
+        rows="3"
+        placeholder="ex: Rua Frei João, 59 - Ipiranga, São Paulo"
+      ></textarea>
+      <div class="invalid-feedback">Informe um endereço completo!</div>
 
-    <br><button type="submit" class="btn btn-primary w-100">
-        Criar minha conta</button>
-
-</form>
-<div class="auth-bottom">Já tem conta? <a href="login">Entre aqui</a></div></section></div>
+      <br /><button type="submit" class="btn btn-primary w-100">Criar minha conta</button>
+    </form>
+    <div class="auth-bottom">Já tem conta? <a href="login">Entre aqui</a></div>
+  </section>
+</div>

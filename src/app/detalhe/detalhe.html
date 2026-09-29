@@ -1,3 +1,56 @@
 <a href="/" class="back-link">← Voltar ao catálogo</a>
 <div class="alert alert-warning" role="alert" *ngIf="mensagem.length > 0">{{ mensagem }}</div>
-<section class="detail-layout" *ngIf="obj.codigo > 0"><div class="detail-cover"><img [src]="obj.codigo + '.png'" [alt]="'Capa de ' + obj.nome" width="500" height="500"><span>VINIL · UM DISCO, MUITAS HISTÓRIAS</span></div><div class="detail-copy"><span class="eyebrow">PARA A SUA COLEÇÃO</span><h1>{{ produtoService.titulo(obj) }}</h1><p class="detail-artist">{{ produtoService.artista(obj) }}</p><p>{{ obj.descritivo }}</p><div class="detail-price"><s *ngIf="obj.valorPromo > 0">{{ formatar(obj.valor) }}</s><div><b>{{ formatar(obj.valorPromo > 0 ? obj.valorPromo : obj.valor) }}</b><span class="discount" *ngIf="obj.valorPromo > 0">-{{ produtoService.calcularDesconto(obj.valor, obj.valorPromo) }}% OFF</span></div></div><p class="stock" *ngIf="obj.quantidade > 0"><span>●</span> Disponível · {{ obj.quantidade }} unidade(s) em estoque</p><button class="btn btn-primary w-100" *ngIf="obj.quantidade > 0" (click)="comprar()">Adicionar à cesta +</button><p class="text-danger" *ngIf="obj.quantidade === 0">Este disco está esgotado no momento.</p><div class="preview-box"><span class="eyebrow">DÊ O PLAY ANTES DE ESCOLHER</span><h2>{{ produtoService.previas[obj.codigo]?.faixa }}</h2><audio controls preload="none" [src]="'audio/' + obj.codigo + '.mp3'" (error)="erroAudio = true" [attr.aria-label]="'Prévia de ' + obj.nome">Seu navegador não suporta áudio.</audio><p class="text-danger small" *ngIf="erroAudio" role="alert">Não foi possível carregar a prévia. Ouça pelo link abaixo.</p><p>Prévia de 30 segundos · <a [href]="produtoService.previas[obj.codigo]?.url" target="_blank" rel="noopener noreferrer">Ouvir no Deezer ↗</a></p></div></div></section>
+<section class="detail-layout" *ngIf="obj.codigo > 0">
+  <div class="detail-cover">
+    <img [src]="obj.codigo + '.png'" [alt]="'Capa de ' + obj.nome" width="500" height="500" /><span
+      >VINIL · UM DISCO, MUITAS HISTÓRIAS</span
+    >
+  </div>
+  <div class="detail-copy">
+    <span class="eyebrow">PARA A SUA COLEÇÃO</span>
+    <h1>{{ produtoService.titulo(obj) }}</h1>
+    <p class="detail-artist">{{ produtoService.artista(obj) }}</p>
+    <p>{{ obj.descritivo }}</p>
+    <div class="detail-price">
+      <s *ngIf="obj.valorPromo > 0">{{ formatar(obj.valor) }}</s>
+      <div>
+        <b>{{ formatar(obj.valorPromo > 0 ? obj.valorPromo : obj.valor) }}</b
+        ><span class="discount" *ngIf="obj.valorPromo > 0"
+          >-{{ produtoService.calcularDesconto(obj.valor, obj.valorPromo) }}% OFF</span
+        >
+      </div>
+    </div>
+    <p class="stock" *ngIf="obj.quantidade > 0">
+      <span>●</span> Disponível · {{ obj.quantidade }} unidade(s) em estoque
+    </p>
+    <button class="btn btn-primary w-100" *ngIf="obj.quantidade > 0" (click)="comprar()">
+      Adicionar à cesta +
+    </button>
+    <p class="text-danger" *ngIf="obj.quantidade === 0">Este disco está esgotado no momento.</p>
+    <div class="preview-box">
+      <span class="eyebrow">DÊ O PLAY ANTES DE ESCOLHER</span>
+      <h2>{{ produtoService.previas[obj.codigo]?.faixa }}</h2>
+      <audio
+        controls
+        preload="none"
+        [src]="'audio/' + obj.codigo + '.mp3'"
+        (error)="erroAudio = true"
+        [attr.aria-label]="'Prévia de ' + obj.nome"
+      >
+        Seu navegador não suporta áudio.
+      </audio>
+      <p class="text-danger small" *ngIf="erroAudio" role="alert">
+        Não foi possível carregar a prévia. Ouça pelo link abaixo.
+      </p>
+      <p>
+        Prévia de 30 segundos ·
+        <a
+          [href]="produtoService.previas[obj.codigo]?.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Ouvir no Deezer ↗</a
+        >
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,22 @@
-<div class="search-field" role="search"><input #campoBusca type="search" placeholder="Qual vai ser o próximo disco?" aria-label="Buscar por álbum, artista ou gênero" (keyup.enter)="buscar(campoBusca.value)"><button type="button" aria-label="Buscar discos" (click)="buscar(campoBusca.value)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button></div>
+<div class="search-field" role="search">
+  <input
+    #campoBusca
+    type="search"
+    placeholder="Qual vai ser o próximo disco?"
+    aria-label="Buscar por álbum, artista ou gênero"
+    (keyup.enter)="buscar(campoBusca.value)"
+  /><button type="button" aria-label="Buscar discos" (click)="buscar(campoBusca.value)">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="m16 16 5 5" />
+    </svg>
+  </button>
+</div>

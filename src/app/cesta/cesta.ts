@@ -12,8 +12,8 @@ import { PedidoService } from '../service/pedido.service';
 export class Cesta {
   private service = inject(CestaService);
   private pedidoService = inject(PedidoService);
-  mensagem: string = "";
-  tipoMensagem: string = "warning";
+  mensagem: string = '';
+  tipoMensagem: string = 'warning';
 
   get lista() {
     return this.service.cesta.itens;
@@ -34,34 +34,34 @@ export class Cesta {
 
   remover(codigo: number) {
     this.service.remover(codigo);
-    this.mensagem = "";
+    this.mensagem = '';
   }
 
   aumentar(codigo: number) {
     if (this.service.alterarQtd(codigo, 1)) {
-      this.mensagem = "";
+      this.mensagem = '';
     } else {
-      this.avisar("Quantidade máxima em estoque atingida.", "warning");
+      this.avisar('Quantidade máxima em estoque atingida.', 'warning');
     }
   }
 
   diminuir(codigo: number) {
     this.service.alterarQtd(codigo, -1);
-    this.mensagem = "";
+    this.mensagem = '';
   }
 
   limpar() {
     this.service.limpar();
-    this.avisar("Cesta esvaziada.", "secondary");
+    this.avisar('Cesta esvaziada.', 'secondary');
   }
 
   finalizar() {
     if (this.lista.length === 0) {
-      this.avisar("Sua cesta está vazia.", "secondary");
+      this.avisar('Sua cesta está vazia.', 'secondary');
       return;
     }
     const pedido = this.pedidoService.criarPedido(this.lista);
     this.service.limpar();
-    this.avisar(`Compra finalizada com sucesso! Pedido #${pedido.numero} registrado.`, "success");
+    this.avisar(`Compra finalizada com sucesso! Pedido #${pedido.numero} registrado.`, 'success');
   }
 }

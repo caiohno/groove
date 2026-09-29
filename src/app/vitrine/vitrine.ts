@@ -18,19 +18,19 @@ export class Vitrine {
   soPromocoes = inject(ActivatedRoute).snapshot.routeConfig?.path === 'promo';
 
   lista: Produto[] = this.soPromocoes
-    ? this.produtoService.lista.filter(obj => obj.valorPromo > 0)
+    ? this.produtoService.lista.filter((obj) => obj.valorPromo > 0)
     : this.produtoService.lista;
 
-  destaques = this.produtoService.lista.filter(p => p.destaque === 1);
+  destaques = this.produtoService.lista.filter((p) => p.destaque === 1);
   discoHero = this.destaques[this.destaques.length - 1];
 
   verDetalhe(obj: Produto) {
-    localStorage.setItem("produto", JSON.stringify(obj));
-    location.href = "./detalhe?codigo=" + obj.codigo;
+    localStorage.setItem('produto', JSON.stringify(obj));
+    location.href = './detalhe?codigo=' + obj.codigo;
   }
 
   comprar(obj: Produto) {
     this.cestaService.adicionar(obj);
-    location.href = "./cesta";
+    location.href = './cesta';
   }
 }

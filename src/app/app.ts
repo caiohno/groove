@@ -8,7 +8,7 @@ import { CestaService } from './service/cesta.service';
   selector: 'app-root',
   imports: [RouterOutlet, RouterLink, RouterLinkActive, BarraBusca],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('groove');
